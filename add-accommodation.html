@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Accommodation - TrustU</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            pink: '#FF4D6D',
+                            light: '#FFF0F3',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50 min-h-screen text-gray-800">
+
+    <main class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        <!-- Header -->
+        <div class="flex items-center gap-4 mb-8">
+            <a href="add-service.html" class="text-gray-600 hover:text-gray-900">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                </svg>
+            </a>
+            <h1 class="text-xl font-bold text-gray-900">Add Accommodation</h1>
+        </div>
+
+        <!-- Form -->
+        <form class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 space-y-6">
+
+            <!-- Accommodation Type -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Accommodation Type *</label>
+                <select required
+                    class="w-full border border-gray-200 rounded-lg text-sm p-3 text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    <option value="">Select accommodation type</option>
+                    <option value="flat-permanent">Flat (Permanent Stay)</option>
+                    <option value="flat-temporary">Flat (Temporary Stay)</option>
+                    <option value="hostel">Hostel</option>
+                    <option value="pg">PG</option>
+                    <option value="hotel">Hotel</option>
+                </select>
+            </div>
+
+            <!-- Location -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Location *</label>
+                <select required
+                    class="w-full border border-gray-200 rounded-lg text-sm p-3 text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    <option value="">Select location</option>
+                    <option value="bhatla-house">Bhatla House</option>
+                    <option value="zakir-nagar">Zakir Nagar</option>
+                    <option value="gafoor-nagar">Gafoor Nagar</option>
+                    <option value="ghaffar-manzil">Ghaffar Manzil</option>
+                    <option value="haji-colony">Haji Colony</option>
+                    <option value="johri-farm">Johri Farm</option>
+                    <option value="okhla-vihar">Okhla Vihar</option>
+                    <option value="noor-nagar">Noor Nagar</option>
+                    <option value="okhla-head">Okhla Head</option>
+                    <option value="abul-fazal-enclave">Abul Fazal Enclave</option>
+                    <option value="shaheen-bagh">Shaheen Bagh</option>
+                </select>
+            </div>
+
+            <!-- Available For -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-3">Available For * (Select multiple)</label>
+                <div class="space-y-2">
+                    <label class="flex items-center gap-3 cursor-pointer">
+                        <input type="checkbox" name="available_for" value="male-bachelors"
+                            class="w-4 h-4 text-blue-500 border-gray-300 rounded focus:ring-blue-500">
+                        <span class="text-sm text-gray-700">Male Bachelors</span>
+                    </label>
+                    <label class="flex items-center gap-3 cursor-pointer">
+                        <input type="checkbox" name="available_for" value="female-bachelors"
+                            class="w-4 h-4 text-blue-500 border-gray-300 rounded focus:ring-blue-500">
+                        <span class="text-sm text-gray-700">Female Bachelors</span>
+                    </label>
+                    <label class="flex items-center gap-3 cursor-pointer">
+                        <input type="checkbox" name="available_for" value="families"
+                            class="w-4 h-4 text-blue-500 border-gray-300 rounded focus:ring-blue-500">
+                        <span class="text-sm text-gray-700">Families</span>
+                    </label>
+                    <label class="flex items-center gap-3 cursor-pointer">
+                        <input type="checkbox" name="available_for" value="anyone"
+                            class="w-4 h-4 text-blue-500 border-gray-300 rounded focus:ring-blue-500">
+                        <span class="text-sm text-gray-700">Anyone</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Maximum Occupancy -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Maximum Occupancy *</label>
+                <select required
+                    class="w-full border border-gray-200 rounded-lg text-sm p-3 text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    <option value="">Select max occupancy</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+
+            <!-- Rent Options -->
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Rent Per Day</label>
+                    <select
+                        class="w-full border border-gray-200 rounded-lg text-sm p-3 text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        <option value="">Select range (optional)</option>
+                        <option value="100-200">₹100-200</option>
+                        <option value="200-400">₹200-400</option>
+                        <option value="400-600">₹400-600</option>
+                        <option value="600-800">₹600-800</option>
+                        <option value="800-1000">₹800-1000</option>
+                        <option value="1000+">₹1000 and above</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Rent Per Month</label>
+                    <select
+                        class="w-full border border-gray-200 rounded-lg text-sm p-3 text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        <option value="">Select range (optional)</option>
+                        <option value="5000-10000">₹5000-10000</option>
+                        <option value="10000-15000">₹10000-15000</option>
+                        <option value="15000-20000">₹15000-20000</option>
+                        <option value="20000-25000">₹20000-25000</option>
+                        <option value="25000+">₹25000 and above</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Contact Number -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Contact Number *</label>
+                <input type="tel" required placeholder="Enter contact number"
+                    class="w-full border border-gray-200 rounded-lg text-sm p-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder-gray-400">
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit"
+                class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-3 rounded-lg transition">
+                Post Service
+            </button>
+
+        </form>
+
+    </main>
+
+</body>
+
+</html>
