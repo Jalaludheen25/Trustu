@@ -5,37 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Circle - TrustU</title>
+    
+    
+    
+    
+    
+    
+    
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         brand: {
-                            pink: '#FF4D6D',
-                            light: '#FFF0F3',
+                            light: '#749f87',
+                            medium: '#568068',
+                            accent: '#669179',
+                            dark: '#26453c',
+                            cream: '#dfe6cc',
                         }
                     }
                 }
             }
         }
     </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+    
 </head>
 
-<body class="bg-gray-50 min-h-screen text-gray-800">
+<body class="bg-brand-cream min-h-screen text-brand-dark">
 
     <!-- Header -->
-    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <header class="bg-brand-dark border-b border-brand-medium sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <!-- Left: Back Button -->
             <a href="index.html"
-                class="flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition border border-gray-200 rounded-md px-3 py-1.5">
+                class="flex items-center gap-2 text-sm font-medium text-brand-dark/70 hover:text-brand-dark transition border border-brand-light/50 rounded-md px-3 py-1.5">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                     stroke="currentColor" class="w-4 h-4">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
@@ -45,7 +57,7 @@
 
             <!-- Center: Title -->
             <div class="flex items-center gap-3 absolute left-1/2 transform -translate-x-1/2">
-                <div class="w-10 h-10 rounded-full bg-brand-pink text-white flex items-center justify-center font-bold">
+                <div class="w-10 h-10 rounded-full bg-brand-light text-brand-dark flex items-center justify-center font-bold">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                         stroke="currentColor" class="w-5 h-5">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -53,14 +65,14 @@
                     </svg>
                 </div>
                 <div>
-                    <h1 class="font-bold text-gray-900 leading-tight">My Circle</h1>
-                    <p class="text-xs text-gray-500">Keralites in Jamia</p>
+                    <h1 class="font-bold text-brand-dark leading-tight">My Circle</h1>
+                    <p class="text-xs text-brand-light">Keralites in Jamia</p>
                 </div>
             </div>
 
             <!-- Right: Profile -->
             <button
-                class="hover:text-gray-900 border border-gray-300 rounded-md px-3 py-1.5 flex items-center gap-2 text-sm font-medium text-gray-600 transition">
+                class="hover:text-brand-dark border border-brand-light rounded-md px-3 py-1.5 flex items-center gap-2 text-sm font-medium text-brand-dark/70 transition">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-4 h-4">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -74,33 +86,33 @@
     <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
 
         <!-- Community Members Section -->
-        <section class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+        <section class="bg-white rounded-xl shadow-sm border border-brand-light/30 p-6">
             <div class="flex items-center justify-between mb-6">
                 <div class="flex items-center gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                        stroke="currentColor" class="w-5 h-5 text-gray-700">
+                        stroke="currentColor" class="w-5 h-5 text-brand-dark/80">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
                     </svg>
-                    <h2 class="text-lg font-bold text-gray-900">Community Members</h2>
-                    <span class="bg-gray-100 text-gray-600 text-xs font-semibold px-2 py-0.5 rounded-full">23</span>
+                    <h2 class="text-lg font-bold text-brand-dark">Community Members</h2>
+                    <span class="bg-gray-100 text-brand-dark/70 text-xs font-semibold px-2 py-0.5 rounded-full">23</span>
                 </div>
                 <button
-                    class="text-sm border border-gray-200 text-gray-600 px-3 py-1.5 rounded hover:bg-gray-50 transition">See
+                    class="text-sm border border-brand-light/50 text-brand-dark/70 px-3 py-1.5 rounded hover:bg-gray-50 transition">See
                     All Members</button>
             </div>
 
             <!-- Search Bar -->
             <div class="relative mb-8">
                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    <svg class="h-5 w-5 text-brand-dark/40" xmlns="http://www.w3.org/2000/svg" fill="none"
                         viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
                 </div>
                 <input type="text"
-                    class="block w-full pl-10 pr-3 py-2.5 border border-gray-200 rounded-lg leading-5 bg-white placeholder-gray-400 focus:outline-none focus:placeholder-gray-300 focus:border-brand-pink focus:ring-1 focus:ring-brand-pink sm:text-sm"
+                    class="block w-full pl-10 pr-3 py-2.5 border border-brand-light/50 rounded-lg leading-5 bg-white placeholder-gray-400 focus:outline-none focus:placeholder-gray-300 focus:border-brand-medium focus:ring-1 focus:ring-brand-medium sm:text-sm"
                     placeholder="Search community members...">
             </div>
 
@@ -109,21 +121,21 @@
 
                 <!-- Member Card 1 -->
                 <div
-                    class="border border-gray-100 rounded-xl p-5 hover:shadow-md transition bg-white flex flex-col justify-between">
+                    class="border border-brand-light/30 rounded-xl p-5 hover:shadow-md transition bg-white flex flex-col justify-between">
                     <div>
                         <div class="flex items-center gap-3 mb-3">
                             <div
                                 class="w-10 h-10 rounded-full bg-indigo-500 flex items-center justify-center text-white font-semibold">
                                 F</div>
                             <div>
-                                <h3 class="font-semibold text-gray-900 text-sm">Fathima Ashraf</h3>
+                                <h3 class="font-semibold text-brand-dark text-sm">Fathima Ashraf</h3>
                                 <p class="text-xs text-gray-500">Student</p>
                             </div>
                         </div>
                         <div class="space-y-2 mb-4">
                             <div class="flex items-center gap-2 text-xs text-gray-500">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                    class="w-4 h-4 text-gray-400">
+                                    class="w-4 h-4 text-brand-dark/40">
                                     <path fill-rule="evenodd"
                                         d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 103 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 002.273 1.765 11.842 11.842 0 00.976.544l.062.029.006.004.003.001zM10 13a4 4 0 100-8 4 4 0 000 8z"
                                         clip-rule="evenodd" />
@@ -132,7 +144,7 @@
                             </div>
                             <div class="flex items-center gap-2 text-xs text-gray-500">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                    class="w-4 h-4 text-gray-400">
+                                    class="w-4 h-4 text-brand-dark/40">
                                     <path fill-rule="evenodd"
                                         d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-5.5-2.5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zM10 12a5.99 5.99 0 00-4.793 2.39A9.97 9.97 0 0110 18c2.314 0 4.438-.784 6.131-2.1.04-.05.074-.1.106-.15l.063-.091c.023-.034.045-.068.067-.103A5.99 5.99 0 0010 12z"
                                         clip-rule="evenodd" />
@@ -154,21 +166,21 @@
 
                 <!-- Member Card 2 -->
                 <div
-                    class="border border-gray-100 rounded-xl p-5 hover:shadow-md transition bg-white flex flex-col justify-between">
+                    class="border border-brand-light/30 rounded-xl p-5 hover:shadow-md transition bg-white flex flex-col justify-between">
                     <div>
                         <div class="flex items-center gap-3 mb-3">
                             <div
                                 class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white font-semibold">
                                 M</div>
                             <div>
-                                <h3 class="font-semibold text-gray-900 text-sm">Mohammed Salim</h3>
+                                <h3 class="font-semibold text-brand-dark text-sm">Mohammed Salim</h3>
                                 <p class="text-xs text-gray-500">Working Professional</p>
                             </div>
                         </div>
                         <div class="space-y-2 mb-4">
                             <div class="flex items-center gap-2 text-xs text-gray-500">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                    class="w-4 h-4 text-gray-400">
+                                    class="w-4 h-4 text-brand-dark/40">
                                     <path fill-rule="evenodd"
                                         d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 103 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 002.273 1.765 11.842 11.842 0 00.976.544l.062.029.006.004.003.001zM10 13a4 4 0 100-8 4 4 0 000 8z"
                                         clip-rule="evenodd" />
@@ -177,7 +189,7 @@
                             </div>
                             <div class="flex items-center gap-2 text-xs text-gray-500">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                    class="w-4 h-4 text-gray-400">
+                                    class="w-4 h-4 text-brand-dark/40">
                                     <path fill-rule="evenodd"
                                         d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-5.5-2.5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zM10 12a5.99 5.99 0 00-4.793 2.39A9.97 9.97 0 0110 18c2.314 0 4.438-.784 6.131-2.1.04-.05.074-.1.106-.15l.063-.091c.023-.034.045-.068.067-.103A5.99 5.99 0 0010 12z"
                                         clip-rule="evenodd" />
@@ -199,21 +211,21 @@
 
                 <!-- Member Card 3 -->
                 <div
-                    class="border border-gray-100 rounded-xl p-5 hover:shadow-md transition bg-white flex flex-col justify-between">
+                    class="border border-brand-light/30 rounded-xl p-5 hover:shadow-md transition bg-white flex flex-col justify-between">
                     <div>
                         <div class="flex items-center gap-3 mb-3">
                             <div
-                                class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-semibold">
+                                class="w-10 h-10 rounded-full bg-brand-medium flex items-center justify-center text-white font-semibold">
                                 A</div>
                             <div>
-                                <h3 class="font-semibold text-gray-900 text-sm">Anitha Menon</h3>
+                                <h3 class="font-semibold text-brand-dark text-sm">Anitha Menon</h3>
                                 <p class="text-xs text-gray-500">Freelancer</p>
                             </div>
                         </div>
                         <div class="space-y-2 mb-4">
                             <div class="flex items-center gap-2 text-xs text-gray-500">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                    class="w-4 h-4 text-gray-400">
+                                    class="w-4 h-4 text-brand-dark/40">
                                     <path fill-rule="evenodd"
                                         d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 103 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 002.273 1.765 11.842 11.842 0 00.976.544l.062.029.006.004.003.001zM10 13a4 4 0 100-8 4 4 0 000 8z"
                                         clip-rule="evenodd" />
@@ -222,7 +234,7 @@
                             </div>
                             <div class="flex items-center gap-2 text-xs text-gray-500">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                    class="w-4 h-4 text-gray-400">
+                                    class="w-4 h-4 text-brand-dark/40">
                                     <path fill-rule="evenodd"
                                         d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-5.5-2.5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zM10 12a5.99 5.99 0 00-4.793 2.39A9.97 9.97 0 0110 18c2.314 0 4.438-.784 6.131-2.1.04-.05.074-.1.106-.15l.063-.091c.023-.034.045-.068.067-.103A5.99 5.99 0 0010 12z"
                                         clip-rule="evenodd" />
@@ -244,21 +256,21 @@
 
                 <!-- Member Card 4 -->
                 <div
-                    class="border border-gray-100 rounded-xl p-5 hover:shadow-md transition bg-white flex flex-col justify-between">
+                    class="border border-brand-light/30 rounded-xl p-5 hover:shadow-md transition bg-white flex flex-col justify-between">
                     <div>
                         <div class="flex items-center gap-3 mb-3">
                             <div
                                 class="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center text-white font-semibold">
                                 G</div>
                             <div>
-                                <h3 class="font-semibold text-gray-900 text-sm">George Thomas</h3>
+                                <h3 class="font-semibold text-brand-dark text-sm">George Thomas</h3>
                                 <p class="text-xs text-gray-500">Business</p>
                             </div>
                         </div>
                         <div class="space-y-2 mb-4">
                             <div class="flex items-center gap-2 text-xs text-gray-500">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                    class="w-4 h-4 text-gray-400">
+                                    class="w-4 h-4 text-brand-dark/40">
                                     <path fill-rule="evenodd"
                                         d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 103 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 002.273 1.765 11.842 11.842 0 00.976.544l.062.029.006.004.003.001zM10 13a4 4 0 100-8 4 4 0 000 8z"
                                         clip-rule="evenodd" />
@@ -267,7 +279,7 @@
                             </div>
                             <div class="flex items-center gap-2 text-xs text-gray-500">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                    class="w-4 h-4 text-gray-400">
+                                    class="w-4 h-4 text-brand-dark/40">
                                     <path fill-rule="evenodd"
                                         d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-5.5-2.5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zM10 12a5.99 5.99 0 00-4.793 2.39A9.97 9.97 0 0110 18c2.314 0 4.438-.784 6.131-2.1.04-.05.074-.1.106-.15l.063-.091c.023-.034.045-.068.067-.103A5.99 5.99 0 0010 12z"
                                         clip-rule="evenodd" />
@@ -289,21 +301,21 @@
 
                 <!-- Member Card 5 -->
                 <div
-                    class="border border-gray-100 rounded-xl p-5 hover:shadow-md transition bg-white flex flex-col justify-between">
+                    class="border border-brand-light/30 rounded-xl p-5 hover:shadow-md transition bg-white flex flex-col justify-between">
                     <div>
                         <div class="flex items-center gap-3 mb-3">
                             <div
                                 class="w-10 h-10 rounded-full bg-indigo-500 flex items-center justify-center text-white font-semibold">
                                 P</div>
                             <div>
-                                <h3 class="font-semibold text-gray-900 text-sm">Priya Nair</h3>
+                                <h3 class="font-semibold text-brand-dark text-sm">Priya Nair</h3>
                                 <p class="text-xs text-gray-500">Student</p>
                             </div>
                         </div>
                         <div class="space-y-2 mb-4">
                             <div class="flex items-center gap-2 text-xs text-gray-500">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                    class="w-4 h-4 text-gray-400">
+                                    class="w-4 h-4 text-brand-dark/40">
                                     <path fill-rule="evenodd"
                                         d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 103 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 002.273 1.765 11.842 11.842 0 00.976.544l.062.029.006.004.003.001zM10 13a4 4 0 100-8 4 4 0 000 8z"
                                         clip-rule="evenodd" />
@@ -312,7 +324,7 @@
                             </div>
                             <div class="flex items-center gap-2 text-xs text-gray-500">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                    class="w-4 h-4 text-gray-400">
+                                    class="w-4 h-4 text-brand-dark/40">
                                     <path fill-rule="evenodd"
                                         d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-5.5-2.5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zM10 12a5.99 5.99 0 00-4.793 2.39A9.97 9.97 0 0110 18c2.314 0 4.438-.784 6.131-2.1.04-.05.074-.1.106-.15l.063-.091c.023-.034.045-.068.067-.103A5.99 5.99 0 0010 12z"
                                         clip-rule="evenodd" />
@@ -334,21 +346,21 @@
 
                 <!-- Member Card 6 -->
                 <div
-                    class="border border-gray-100 rounded-xl p-5 hover:shadow-md transition bg-white flex flex-col justify-between">
+                    class="border border-brand-light/30 rounded-xl p-5 hover:shadow-md transition bg-white flex flex-col justify-between">
                     <div>
                         <div class="flex items-center gap-3 mb-3">
                             <div
                                 class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white font-semibold">
                                 R</div>
                             <div>
-                                <h3 class="font-semibold text-gray-900 text-sm">Rashid Ahmed</h3>
+                                <h3 class="font-semibold text-brand-dark text-sm">Rashid Ahmed</h3>
                                 <p class="text-xs text-gray-500">Working Professional</p>
                             </div>
                         </div>
                         <div class="space-y-2 mb-4">
                             <div class="flex items-center gap-2 text-xs text-gray-500">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                    class="w-4 h-4 text-gray-400">
+                                    class="w-4 h-4 text-brand-dark/40">
                                     <path fill-rule="evenodd"
                                         d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 103 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 002.273 1.765 11.842 11.842 0 00.976.544l.062.029.006.004.003.001zM10 13a4 4 0 100-8 4 4 0 000 8z"
                                         clip-rule="evenodd" />
@@ -357,7 +369,7 @@
                             </div>
                             <div class="flex items-center gap-2 text-xs text-gray-500">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                    class="w-4 h-4 text-gray-400">
+                                    class="w-4 h-4 text-brand-dark/40">
                                     <path fill-rule="evenodd"
                                         d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-5.5-2.5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zM10 12a5.99 5.99 0 00-4.793 2.39A9.97 9.97 0 0110 18c2.314 0 4.438-.784 6.131-2.1.04-.05.074-.1.106-.15l.063-.091c.023-.034.045-.068.067-.103A5.99 5.99 0 0010 12z"
                                         clip-rule="evenodd" />
@@ -381,29 +393,29 @@
         </section>
 
         <!-- My Connections Section -->
-        <section class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+        <section class="bg-white rounded-xl shadow-sm border border-brand-light/30 p-6">
             <div class="flex items-center gap-2 mb-6">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                    stroke="currentColor" class="w-5 h-5 text-gray-700">
+                    stroke="currentColor" class="w-5 h-5 text-brand-dark/80">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
                 </svg>
-                <h2 class="text-lg font-bold text-gray-900">My Connections</h2>
-                <span class="bg-gray-100 text-gray-600 text-xs font-semibold px-2 py-0.5 rounded-full">2</span>
+                <h2 class="text-lg font-bold text-brand-dark">My Connections</h2>
+                <span class="bg-gray-100 text-brand-dark/70 text-xs font-semibold px-2 py-0.5 rounded-full">2</span>
             </div>
             <!-- Connections Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 
                 <!-- Connection Card 1 -->
                 <div
-                    class="border border-gray-100 rounded-xl p-5 hover:shadow-md transition bg-white flex flex-col justify-between">
+                    class="border border-brand-light/30 rounded-xl p-5 hover:shadow-md transition bg-white flex flex-col justify-between">
                     <div>
                         <div class="flex items-center gap-3 mb-3">
                             <div
                                 class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white font-semibold">
                                 A</div>
                             <div>
-                                <h3 class="font-semibold text-gray-900 text-sm">Arjun Nair</h3>
+                                <h3 class="font-semibold text-brand-dark text-sm">Arjun Nair</h3>
                                 <p class="text-xs text-gray-500">Working Professional</p>
                             </div>
                         </div>
@@ -412,14 +424,14 @@
 
                 <!-- Connection Card 2 -->
                 <div
-                    class="border border-gray-100 rounded-xl p-5 hover:shadow-md transition bg-white flex flex-col justify-between">
+                    class="border border-brand-light/30 rounded-xl p-5 hover:shadow-md transition bg-white flex flex-col justify-between">
                     <div>
                         <div class="flex items-center gap-3 mb-3">
                             <div
                                 class="w-10 h-10 rounded-full bg-indigo-500 flex items-center justify-center text-white font-semibold">
                                 P</div>
                             <div>
-                                <h3 class="font-semibold text-gray-900 text-sm">Priya Menon</h3>
+                                <h3 class="font-semibold text-brand-dark text-sm">Priya Menon</h3>
                                 <p class="text-xs text-gray-500">Student</p>
                             </div>
                         </div>

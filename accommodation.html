@@ -5,36 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accommodation - TrustU</title>
+    
+    
+    
+    
+    
+    
+    
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         brand: {
-                            pink: '#FF4D6D',
-                            light: '#FFF0F3',
+                            light: '#749f87',
+                            medium: '#568068',
+                            accent: '#669179',
+                            dark: '#26453c',
+                            cream: '#dfe6cc',
                         }
                     }
                 }
             }
         }
     </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+    
 </head>
 
-<body class="bg-gray-50 min-h-screen text-gray-800">
+<body class="bg-brand-cream min-h-screen text-brand-dark">
 
     <!-- Header -->
-    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <header class="bg-brand-dark border-b border-brand-medium sticky top-0 z-50">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-2">
-                <div class="w-8 h-8 rounded-full bg-brand-pink text-white flex items-center justify-center font-bold">
+                <div class="w-8 h-8 rounded-full bg-brand-light text-brand-dark flex items-center justify-center font-bold">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                         stroke="currentColor" class="w-5 h-5">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -42,12 +54,12 @@
                     </svg>
                 </div>
                 <div>
-                    <h1 class="font-bold text-lg leading-tight">TrustU</h1>
-                    <p class="text-xs text-gray-500">Keralites in Jamia</p>
+                    <h1 class="font-bold text-lg leading-tight text-white">TrustU</h1>
+                    <p class="text-xs text-brand-light">Keralites in Jamia</p>
                 </div>
             </a>
-            <div class="flex items-center gap-4 text-sm font-medium text-gray-600">
-                <a href="my-circle.html" class="hover:text-gray-900 flex items-center gap-1">
+            <div class="flex items-center gap-4 text-sm font-medium text-brand-light">
+                <a href="my-circle.html" class="hover:text-white flex items-center gap-1">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-4 h-4">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -56,7 +68,7 @@
                     My Circle
                 </a>
                 <button
-                    class="hover:text-gray-900 border border-gray-300 rounded-md px-3 py-1.5 flex items-center gap-1">
+                    class="hover:text-brand-dark border border-brand-light rounded-md px-3 py-1.5 flex items-center gap-1">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-4 h-4">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -72,11 +84,11 @@
     <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
 
         <!-- Hero Card -->
-        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-brand-light">
             <div class="flex items-start justify-between">
                 <div class="flex items-center gap-4">
                     <div
-                        class="w-16 h-16 rounded-full bg-brand-pink flex items-center justify-center text-white text-2xl shadow-lg shadow-brand-pink/30">
+                        class="w-16 h-16 rounded-full bg-brand-medium flex items-center justify-center text-white text-2xl shadow-lg shadow-brand-medium/30/30">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
                             <path fill-rule="evenodd"
                                 d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
@@ -84,7 +96,7 @@
                         </svg>
                     </div>
                     <div>
-                        <h2 class="text-2xl font-bold text-gray-900">Keralites in Jamia</h2>
+                        <h2 class="text-2xl font-bold text-brand-dark">Keralites in Jamia</h2>
                         <div class="flex items-center gap-2 text-sm text-gray-500 mt-1">
                             <span class="flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
@@ -92,15 +104,15 @@
                                         d="M7 8a3 3 0 100-6 3 3 0 000 6zM14.5 9a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM1.615 16.428a1.224 1.224 0 01-.569-1.175 6.002 6.002 0 0111.908 0c.058.467-.172.92-.57 1.174A9.953 9.953 0 017 18a9.953 9.953 0 01-5.385-1.572zM14.5 16h-.106c.07-.297.088-.611.048-.933a7.47 7.47 0 00-1.588-3.755 4.502 4.502 0 015.874 2.636.818.818 0 01-.36.98A7.465 7.465 0 0114.5 16z" />
                                 </svg> 20 members in this community</span>
                         </div>
-                        <div class="flex gap-2 text-xs text-blue-500 mt-1 font-medium">
-                            <span class="bg-blue-50 px-2 py-0.5 rounded">2 connections</span>
-                            <span class="text-gray-400">4 mutual connections</span>
+                        <div class="flex gap-2 text-xs text-brand-medium mt-1 font-medium">
+                            <span class="bg-brand-light px-2 py-0.5 rounded">2 connections</span>
+                            <span class="text-brand-medium">4 mutual connections</span>
                         </div>
                     </div>
                 </div>
                 <div class="flex gap-3">
                     <a href="add-service.html"
-                        class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 transition">
+                        class="bg-brand-medium hover:bg-brand-dark text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 transition">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                             stroke="currentColor" class="w-4 h-4">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
@@ -108,7 +120,7 @@
                         Add Service
                     </a>
                     <a href="sell-product.html"
-                        class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 transition">
+                        class="bg-brand-medium hover:bg-brand-medium text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 transition">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                             stroke="currentColor" class="w-4 h-4">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
@@ -120,9 +132,9 @@
         </div>
 
         <!-- Navigation Tabs -->
-        <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-1 flex items-center gap-1 overflow-x-auto">
+        <div class="bg-white rounded-lg shadow-sm border border-brand-light/30 p-1 flex items-center gap-1 overflow-x-auto">
             <a href="index.html"
-                class="flex-1 whitespace-nowrap px-4 py-2 text-sm font-medium bg-transparent text-gray-500 hover:bg-gray-50 rounded-md flex items-center justify-center gap-2">
+                class="flex-1 whitespace-nowrap px-4 py-2 text-sm font-medium bg-transparent text-gray-500 hover:bg-brand-light rounded-md flex items-center justify-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-4 h-4">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -131,40 +143,40 @@
                 Community
             </a>
             <a href="accommodation.html"
-                class="flex-1 whitespace-nowrap px-4 py-2 text-sm font-semibold rounded-md bg-white text-gray-900 shadow-sm border border-gray-200 flex items-center justify-center gap-2">
+                class="flex-1 whitespace-nowrap px-4 py-2 text-sm font-semibold rounded-md bg-white text-brand-medium shadow-sm flex items-center justify-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-4 h-4">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
                 </svg>
-                Accommodation <span class="bg-gray-100 text-gray-600 px-1.5 rounded-full text-xs">0</span>
+                Accommodation <span class="bg-gray-100 text-brand-dark/70 px-1.5 rounded-full text-xs">0</span>
             </a>
             <a href="proxy.html"
-                class="flex-1 whitespace-nowrap px-4 py-2 text-sm font-medium bg-transparent text-gray-500 hover:bg-gray-50 rounded-md flex items-center justify-center gap-2">
+                class="flex-1 whitespace-nowrap px-4 py-2 text-sm font-medium bg-transparent text-gray-500 hover:bg-brand-light rounded-md flex items-center justify-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-4 h-4">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
                 </svg>
-                Proxy <span class="bg-gray-100 text-gray-600 px-1.5 rounded-full text-xs">0</span>
+                Proxy <span class="bg-gray-100 text-brand-dark/70 px-1.5 rounded-full text-xs">0</span>
             </a>
             <a href="buy-sell.html"
-                class="flex-1 whitespace-nowrap px-4 py-2 text-sm font-medium bg-transparent text-gray-500 hover:bg-gray-50 rounded-md flex items-center justify-center gap-2">
+                class="flex-1 whitespace-nowrap px-4 py-2 text-sm font-medium bg-transparent text-gray-500 hover:bg-brand-light rounded-md flex items-center justify-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-4 h-4">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
                 </svg>
-                Buy & Sell <span class="bg-gray-100 text-gray-600 px-1.5 rounded-full text-xs">0</span>
+                Buy & Sell <span class="bg-gray-100 text-brand-dark/70 px-1.5 rounded-full text-xs">0</span>
             </a>
         </div>
 
         <!-- Filters Section -->
         <div>
             <div class="flex items-center justify-between mb-3">
-                <h3 class="font-bold text-gray-900">Filter Accommodations</h3>
+                <h3 class="font-bold text-brand-dark">Filter Accommodations</h3>
                 <button
-                    class="flex items-center gap-1 text-xs font-medium text-gray-500 hover:text-gray-900 border border-gray-200 rounded px-2 py-1">
+                    class="flex items-center gap-1 text-xs font-medium text-gray-500 hover:text-brand-dark border border-brand-light/50 rounded px-2 py-1">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                         stroke="currentColor" class="w-3 h-3">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -174,14 +186,14 @@
             </div>
             <div class="grid grid-cols-2 md:grid-cols-6 gap-3">
                 <select
-                    class="border border-gray-200 rounded-lg text-sm p-2 text-gray-600 focus:outline-none focus:ring-1 focus:ring-brand-pink">
+                    class="border border-brand-light/50 rounded-lg text-sm p-2 text-brand-dark/70 focus:outline-none focus:ring-1 focus:ring-brand-medium">
                     <option value="">Connection Type</option>
                     <option value="all">All</option>
                     <option value="friends">Friends</option>
                     <option value="mutual">Mutual Friends</option>
                 </select>
                 <select
-                    class="border border-gray-200 rounded-lg text-sm p-2 text-gray-600 focus:outline-none focus:ring-1 focus:ring-brand-pink">
+                    class="border border-brand-light/50 rounded-lg text-sm p-2 text-brand-dark/70 focus:outline-none focus:ring-1 focus:ring-brand-medium">
                     <option value="">Accommodation Type</option>
                     <option value="flat-permanent">Flat (Permanent Stay)</option>
                     <option value="flat-temporary">Flat (Temporary Stay)</option>
@@ -190,7 +202,7 @@
                     <option value="hotel">Hotel</option>
                 </select>
                 <select
-                    class="border border-gray-200 rounded-lg text-sm p-2 text-gray-600 focus:outline-none focus:ring-1 focus:ring-brand-pink">
+                    class="border border-brand-light/50 rounded-lg text-sm p-2 text-brand-dark/70 focus:outline-none focus:ring-1 focus:ring-brand-medium">
                     <option value="">Available For</option>
                     <option value="male-bachelors">Male Bachelors</option>
                     <option value="female-bachelors">Female Bachelors</option>
@@ -198,7 +210,7 @@
                     <option value="anyone">Anyone</option>
                 </select>
                 <select
-                    class="border border-gray-200 rounded-lg text-sm p-2 text-gray-600 focus:outline-none focus:ring-1 focus:ring-brand-pink">
+                    class="border border-brand-light/50 rounded-lg text-sm p-2 text-brand-dark/70 focus:outline-none focus:ring-1 focus:ring-brand-medium">
                     <option value="">Max Occupancy</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -212,7 +224,7 @@
                     <option value="10">10</option>
                 </select>
                 <select
-                    class="border border-gray-200 rounded-lg text-sm p-2 text-gray-600 focus:outline-none focus:ring-1 focus:ring-brand-pink">
+                    class="border border-brand-light/50 rounded-lg text-sm p-2 text-brand-dark/70 focus:outline-none focus:ring-1 focus:ring-brand-medium">
                     <option value="">Rent Per Day</option>
                     <option value="100-200">₹100-200</option>
                     <option value="200-400">₹200-400</option>
@@ -222,7 +234,7 @@
                     <option value="1000+">₹1000 and above</option>
                 </select>
                 <select
-                    class="border border-gray-200 rounded-lg text-sm p-2 text-gray-600 focus:outline-none focus:ring-1 focus:ring-brand-pink">
+                    class="border border-brand-light/50 rounded-lg text-sm p-2 text-brand-dark/70 focus:outline-none focus:ring-1 focus:ring-brand-medium">
                     <option value="">Rent Per Month</option>
                     <option value="5000-10000">₹5000-10000</option>
                     <option value="10000-15000">₹10000-15000</option>
@@ -234,18 +246,18 @@
         </div>
 
         <!-- Listing Card -->
-        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 max-w-sm cursor-pointer hover:shadow-md transition"
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-brand-light/30 max-w-sm cursor-pointer hover:shadow-md transition"
             onclick="openModal()">
             <div class="flex items-start gap-4">
                 <div
-                    class="w-10 h-10 rounded-full bg-brand-pink text-white flex items-center justify-center font-bold text-sm">
+                    class="w-10 h-10 rounded-full bg-brand-light text-brand-dark flex items-center justify-center font-bold text-sm">
                     A</div>
                 <div class="flex-1">
-                    <h3 class="font-bold text-gray-900 text-sm">Anwar Rahman</h3>
+                    <h3 class="font-bold text-brand-dark text-sm">Anwar Rahman</h3>
                     <div class="text-xs text-gray-500 mt-1">
                         Accomodation • Okhla, Delhi • 25/01/2024
                     </div>
-                    <div class="flex items-center gap-1 text-xs text-gray-400 mt-1">
+                    <div class="flex items-center gap-1 text-xs text-brand-dark/40 mt-1">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3">
                             <path
                                 d="M10 8a3 3 0 100-6 3 3 0 000 6zM3.465 14.492a5.296 5.296 0 011.042-3.996 6.002 6.002 0 0111.415 0c.307.391.547.822.71 1.28A9.954 9.954 0 0110 18a9.954 9.954 0 01-6.535-3.508z" />
@@ -253,7 +265,7 @@
                         Not Connected • 0 mutual friends
                     </div>
                     <button
-                        class="mt-4 w-full bg-blue-50 text-blue-600 text-xs font-semibold py-2 rounded-lg hover:bg-blue-100 transition">View
+                        class="mt-4 w-full bg-brand-light text-brand-medium text-xs font-semibold py-2 rounded-lg hover:bg-brand-light/20 transition">View
                         More Details</button>
                 </div>
             </div>
@@ -265,7 +277,7 @@
     <div id="detailModal" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden">
         <div class="bg-white rounded-xl shadow-xl max-w-md w-full mx-4 relative">
             <!-- Close Button -->
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-brand-dark/40 hover:text-brand-dark/70">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                     stroke="currentColor" class="w-5 h-5">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -274,20 +286,20 @@
 
             <div class="p-6">
                 <!-- Title -->
-                <h2 class="text-lg font-bold text-gray-900 mb-4">Room Available Near Jamia</h2>
+                <h2 class="text-lg font-bold text-brand-dark mb-4">Room Available Near Jamia</h2>
 
                 <!-- User Info -->
                 <div class="flex items-center gap-3 mb-4">
                     <div
-                        class="w-10 h-10 rounded-full bg-brand-pink text-white flex items-center justify-center font-bold text-sm">
+                        class="w-10 h-10 rounded-full bg-brand-light text-brand-dark flex items-center justify-center font-bold text-sm">
                         A
                     </div>
                     <div>
-                        <h3 class="font-semibold text-gray-900 text-sm">Anwar Rahman</h3>
+                        <h3 class="font-semibold text-brand-dark text-sm">Anwar Rahman</h3>
                         <p class="text-xs text-gray-500">Student</p>
                     </div>
                     <span
-                        class="ml-auto bg-blue-50 text-blue-600 text-xs font-medium px-2 py-1 rounded flex items-center gap-1">
+                        class="ml-auto bg-brand-light text-brand-medium text-xs font-medium px-2 py-1 rounded flex items-center gap-1">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-3 h-3">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -299,15 +311,15 @@
 
                 <!-- Description -->
                 <div class="mb-4">
-                    <h4 class="text-sm font-semibold text-gray-900 mb-1">Description</h4>
-                    <p class="text-sm text-gray-600">Looking for Malayali flatmate. Close to Jamia campus.</p>
+                    <h4 class="text-sm font-semibold text-brand-dark mb-1">Description</h4>
+                    <p class="text-sm text-brand-dark/70">Looking for Malayali flatmate. Close to Jamia campus.</p>
                 </div>
 
                 <!-- Location and Price -->
                 <div class="grid grid-cols-2 gap-4 mb-4">
                     <div>
-                        <h4 class="text-sm font-semibold text-gray-900 mb-1">Location</h4>
-                        <p class="text-sm text-gray-600 flex items-center gap-1">
+                        <h4 class="text-sm font-semibold text-brand-dark mb-1">Location</h4>
+                        <p class="text-sm text-brand-dark/70 flex items-center gap-1">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="w-4 h-4">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -319,19 +331,19 @@
                         </p>
                     </div>
                     <div>
-                        <h4 class="text-sm font-semibold text-gray-900 mb-1">Price</h4>
+                        <h4 class="text-sm font-semibold text-brand-dark mb-1">Price</h4>
                         <p class="text-sm text-emerald-600 font-semibold">₹6500/month</p>
                     </div>
                 </div>
 
                 <!-- Contact -->
                 <div class="mb-4">
-                    <h4 class="text-sm font-semibold text-gray-900 mb-1">Contact</h4>
-                    <p class="text-sm text-gray-600">+91 9876543230</p>
+                    <h4 class="text-sm font-semibold text-brand-dark mb-1">Contact</h4>
+                    <p class="text-sm text-brand-dark/70">+91 9876543230</p>
                 </div>
 
                 <!-- Posted Date -->
-                <p class="text-xs text-gray-400">Posted on 25/01/2024</p>
+                <p class="text-xs text-brand-dark/40">Posted on 25/01/2024</p>
             </div>
         </div>
     </div>

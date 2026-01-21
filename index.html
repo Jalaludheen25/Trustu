@@ -5,36 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrustU - Keralites in Jamia</title>
+    
+    
+    
+    
+    
+    
+    
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         brand: {
-                            pink: '#FF4D6D',
-                            light: '#FFF0F3',
+                            light: '#749f87',
+                            medium: '#568068',
+                            accent: '#669179',
+                            dark: '#26453c',
+                            cream: '#dfe6cc',
                         }
                     }
                 }
             }
         }
     </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #26453c;
+        }
+    </style>
 </head>
 
-<body class="bg-gray-50 min-h-screen text-gray-800">
+<body class="bg-brand-cream min-h-screen text-brand-dark">
 
     <!-- Header -->
-    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <header class="bg-brand-dark border-b border-brand-medium sticky top-0 z-50">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div class="flex items-center gap-2">
-                <div class="w-8 h-8 rounded-full bg-brand-pink text-white flex items-center justify-center font-bold">
+                <div
+                    class="w-8 h-8 rounded-full bg-brand-light text-brand-dark flex items-center justify-center font-bold">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                         stroke="currentColor" class="w-5 h-5">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -42,12 +55,12 @@
                     </svg>
                 </div>
                 <div>
-                    <h1 class="font-bold text-lg leading-tight">TrustU</h1>
-                    <p class="text-xs text-gray-500">Keralites in Jamia</p>
+                    <h1 class="font-bold text-lg leading-tight text-brand-cream">TrustU</h1>
+                    <p class="text-xs text-brand-light">Keralites in Jamia</p>
                 </div>
             </div>
-            <div class="flex items-center gap-4 text-sm font-medium text-gray-600">
-                <a href="my-circle.html" class="hover:text-gray-900 flex items-center gap-1">
+            <div class="flex items-center gap-4 text-sm font-medium text-brand-light">
+                <a href="my-circle.html" class="hover:text-white flex items-center gap-1">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-4 h-4">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -56,7 +69,7 @@
                     My Circle
                 </a>
                 <button id="myProfileBtn"
-                    class="hover:text-gray-900 border border-gray-300 rounded-md px-3 py-1.5 flex items-center gap-1">
+                    class="hover:text-white border border-brand-light rounded-md px-3 py-1.5 flex items-center gap-1">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-4 h-4">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -72,11 +85,11 @@
     <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
 
         <!-- Hero Card -->
-        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-brand-light/30">
             <div class="flex items-start justify-between">
                 <div class="flex items-center gap-4">
                     <div
-                        class="w-16 h-16 rounded-full bg-brand-pink flex items-center justify-center text-white text-2xl shadow-lg shadow-brand-pink/30">
+                        class="w-16 h-16 rounded-full bg-brand-medium flex items-center justify-center text-white text-2xl shadow-lg">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
                             <path fill-rule="evenodd"
                                 d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
@@ -84,23 +97,23 @@
                         </svg>
                     </div>
                     <div>
-                        <h2 class="text-2xl font-bold text-gray-900">Keralites in Jamia</h2>
-                        <div class="flex items-center gap-2 text-sm text-gray-500 mt-1">
+                        <h2 class="text-2xl font-bold text-brand-dark">Keralites in Jamia</h2>
+                        <div class="flex items-center gap-2 text-sm text-brand-dark/70 mt-1">
                             <span class="flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
                                     <path
                                         d="M7 8a3 3 0 100-6 3 3 0 000 6zM14.5 9a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM1.615 16.428a1.224 1.224 0 01-.569-1.175 6.002 6.002 0 0111.908 0c.058.467-.172.92-.57 1.174A9.953 9.953 0 017 18a9.953 9.953 0 01-5.385-1.572zM14.5 16h-.106c.07-.297.088-.611.048-.933a7.47 7.47 0 00-1.588-3.755 4.502 4.502 0 015.874 2.636.818.818 0 01-.36.98A7.465 7.465 0 0114.5 16z" />
                                 </svg> 20 members in this community</span>
                         </div>
-                        <div class="flex gap-2 text-xs text-blue-500 mt-1 font-medium">
-                            <span class="bg-blue-50 px-2 py-0.5 rounded">2 connections</span>
-                            <span class="text-gray-400">4 mutual connections</span>
+                        <div class="flex gap-2 text-xs text-brand-medium mt-1 font-medium">
+                            <span class="bg-brand-light/20 px-2 py-0.5 rounded text-brand-dark">2 connections</span>
+                            <span class="text-brand-medium">4 mutual connections</span>
                         </div>
                     </div>
                 </div>
                 <div class="flex gap-3">
                     <a href="add-service.html"
-                        class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 transition">
+                        class="bg-brand-medium hover:bg-brand-dark text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 transition">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                             stroke="currentColor" class="w-4 h-4">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
@@ -108,7 +121,7 @@
                         Add Service
                     </a>
                     <a href="sell-product.html"
-                        class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 transition">
+                        class="bg-brand-light hover:bg-brand-medium text-brand-dark hover:text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 transition">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                             stroke="currentColor" class="w-4 h-4">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
@@ -120,9 +133,10 @@
         </div>
 
         <!-- Navigation Tabs -->
-        <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-1 flex items-center gap-1 overflow-x-auto">
+        <div
+            class="bg-white rounded-lg shadow-sm border border-brand-light/30 p-1 flex items-center gap-1 overflow-x-auto">
             <a href="index.html"
-                class="flex-1 whitespace-nowrap px-4 py-2 text-sm font-semibold rounded-md bg-white text-gray-900 shadow-sm border border-gray-200 flex items-center justify-center gap-2">
+                class="flex-1 whitespace-nowrap px-4 py-2 text-sm font-semibold rounded-md bg-brand-medium text-white flex items-center justify-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-4 h-4">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -131,47 +145,47 @@
                 Community
             </a>
             <a href="accommodation.html"
-                class="flex-1 whitespace-nowrap px-4 py-2 text-sm font-medium bg-transparent text-gray-500 hover:bg-gray-50 rounded-md flex items-center justify-center gap-2">
+                class="flex-1 whitespace-nowrap px-4 py-2 text-sm font-medium bg-transparent text-brand-dark hover:bg-brand-light/20 rounded-md flex items-center justify-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-4 h-4">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
                 </svg>
-                Accommodation <span class="bg-gray-100 text-gray-600 px-1.5 rounded-full text-xs">0</span>
+                Accommodation <span class="bg-brand-light/30 text-brand-dark px-1.5 rounded-full text-xs">0</span>
             </a>
             <a href="proxy.html"
-                class="flex-1 whitespace-nowrap px-4 py-2 text-sm font-medium bg-transparent text-gray-500 hover:bg-gray-50 rounded-md flex items-center justify-center gap-2">
+                class="flex-1 whitespace-nowrap px-4 py-2 text-sm font-medium bg-transparent text-brand-dark hover:bg-brand-light/20 rounded-md flex items-center justify-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-4 h-4">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
                 </svg>
-                Proxy <span class="bg-gray-100 text-gray-600 px-1.5 rounded-full text-xs">0</span>
+                Proxy <span class="bg-brand-light/30 text-brand-dark px-1.5 rounded-full text-xs">0</span>
             </a>
             <a href="buy-sell.html"
-                class="flex-1 whitespace-nowrap px-4 py-2 text-sm font-medium bg-transparent text-gray-500 hover:bg-gray-50 rounded-md flex items-center justify-center gap-2">
+                class="flex-1 whitespace-nowrap px-4 py-2 text-sm font-medium bg-transparent text-brand-dark hover:bg-brand-light/20 rounded-md flex items-center justify-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-4 h-4">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
                 </svg>
-                Buy & Sell <span class="bg-gray-100 text-gray-600 px-1.5 rounded-full text-xs">0</span>
+                Buy & Sell <span class="bg-brand-light/30 text-brand-dark px-1.5 rounded-full text-xs">0</span>
             </a>
         </div>
 
         <!-- Create Post -->
-        <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+        <div class="bg-white rounded-xl p-4 shadow-sm border border-brand-light/30">
             <div class="flex gap-4">
                 <div
-                    class="w-10 h-10 rounded-full bg-brand-pink text-white flex items-center justify-center font-bold flex-shrink-0">
+                    class="w-10 h-10 rounded-full bg-brand-medium text-white flex items-center justify-center font-bold flex-shrink-0">
                     T</div>
                 <div class="flex-1">
                     <textarea
-                        class="w-full border border-gray-200 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-pink/50 focus:border-brand-pink focus:outline-none resize-none h-24"
+                        class="w-full border border-brand-light/50 rounded-lg p-3 text-sm text-brand-dark focus:ring-2 focus:ring-brand-medium/50 focus:border-brand-medium focus:outline-none resize-none h-24"
                         placeholder="Ask any query to your community..."></textarea>
                     <div class="flex justify-end mt-2">
                         <button
-                            class="bg-brand-pink hover:bg-pink-500 text-white text-sm font-medium px-6 py-2 rounded-lg transition">Post
+                            class="bg-brand-medium hover:bg-brand-dark text-white text-sm font-medium px-6 py-2 rounded-lg transition">Post
                             Query</button>
                     </div>
                 </div>
@@ -190,12 +204,13 @@
     <!-- Profile Modal -->
     <div id="profileModal" class="fixed inset-0 z-50 hidden">
         <!-- Overlay -->
-        <div class="fixed inset-0 bg-black/50 backdrop-blur-sm" id="modalOverlay"></div>
+        <div class="fixed inset-0 bg-brand-dark/50 backdrop-blur-sm" id="modalOverlay"></div>
         <!-- Modal Content -->
         <div class="fixed inset-0 flex items-center justify-center p-4">
             <div class="bg-white rounded-xl shadow-2xl w-full max-w-md relative animate-fadeIn">
                 <!-- Close Button -->
-                <button id="closeModalBtn" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition">
+                <button id="closeModalBtn"
+                    class="absolute top-4 right-4 text-brand-dark/40 hover:text-brand-dark transition">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                         stroke="currentColor" class="w-5 h-5">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -204,33 +219,33 @@
 
                 <!-- Modal Header -->
                 <div class="p-6 pb-4">
-                    <h2 class="text-xl font-semibold text-gray-900">Update Profile</h2>
+                    <h2 class="text-xl font-semibold text-brand-dark">Update Profile</h2>
                 </div>
 
                 <!-- Modal Body -->
                 <div class="px-6 pb-6 space-y-4">
                     <!-- Name Field -->
                     <div>
-                        <label for="profileName" class="block text-sm font-medium text-gray-700 mb-1">Name <span
+                        <label for="profileName" class="block text-sm font-medium text-brand-dark mb-1">Name <span
                                 class="text-red-500">*</span></label>
                         <input type="text" id="profileName" placeholder="Enter your name"
-                            class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:ring-2 focus:ring-brand-pink/50 focus:border-brand-pink focus:outline-none transition">
+                            class="w-full border border-brand-light/50 rounded-lg px-4 py-2.5 text-sm text-brand-dark focus:ring-2 focus:ring-brand-medium/50 focus:border-brand-medium focus:outline-none transition">
                     </div>
 
                     <!-- Gender Field -->
                     <div>
-                        <label for="profileGender" class="block text-sm font-medium text-gray-700 mb-1">Gender <span
+                        <label for="profileGender" class="block text-sm font-medium text-brand-dark mb-1">Gender <span
                                 class="text-red-500">*</span></label>
                         <div class="relative">
                             <select id="profileGender"
-                                class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:ring-2 focus:ring-brand-pink/50 focus:border-brand-pink focus:outline-none appearance-none bg-white transition">
+                                class="w-full border border-brand-light/50 rounded-lg px-4 py-2.5 text-sm text-brand-dark focus:ring-2 focus:ring-brand-medium/50 focus:border-brand-medium focus:outline-none appearance-none bg-white transition">
                                 <option value="male">Male</option>
                                 <option value="female">Female</option>
                                 <option value="other">Other</option>
                             </select>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor"
-                                class="w-4 h-4 absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">
+                                class="w-4 h-4 absolute right-4 top-1/2 -translate-y-1/2 text-brand-dark/40 pointer-events-none">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                             </svg>
                         </div>
@@ -238,11 +253,12 @@
 
                     <!-- Designation Field -->
                     <div>
-                        <label for="profileDesignation" class="block text-sm font-medium text-gray-700 mb-1">Designation
+                        <label for="profileDesignation"
+                            class="block text-sm font-medium text-brand-dark mb-1">Designation
                             <span class="text-red-500">*</span></label>
                         <div class="relative">
                             <select id="profileDesignation"
-                                class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:ring-2 focus:ring-brand-pink/50 focus:border-brand-pink focus:outline-none appearance-none bg-white transition">
+                                class="w-full border border-brand-light/50 rounded-lg px-4 py-2.5 text-sm text-brand-dark focus:ring-2 focus:ring-brand-medium/50 focus:border-brand-medium focus:outline-none appearance-none bg-white transition">
                                 <option value="student">Student</option>
                                 <option value="faculty">Faculty</option>
                                 <option value="staff">Staff</option>
@@ -251,7 +267,7 @@
                             </select>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor"
-                                class="w-4 h-4 absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">
+                                class="w-4 h-4 absolute right-4 top-1/2 -translate-y-1/2 text-brand-dark/40 pointer-events-none">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                             </svg>
                         </div>
@@ -259,17 +275,18 @@
 
                     <!-- Contact Number Field -->
                     <div>
-                        <label for="profileContact" class="block text-sm font-medium text-gray-700 mb-1">Contact Number
+                        <label for="profileContact" class="block text-sm font-medium text-brand-dark mb-1">Contact
+                            Number
                             <span class="text-red-500">*</span></label>
                         <input type="tel" id="profileContact" placeholder="Enter contact number"
-                            class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:ring-2 focus:ring-brand-pink/50 focus:border-brand-pink focus:outline-none transition">
+                            class="w-full border border-brand-light/50 rounded-lg px-4 py-2.5 text-sm text-brand-dark focus:ring-2 focus:ring-brand-medium/50 focus:border-brand-medium focus:outline-none transition">
                     </div>
 
                     <!-- Email Field -->
                     <div>
-                        <label for="profileEmail" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <label for="profileEmail" class="block text-sm font-medium text-brand-dark mb-1">Email</label>
                         <input type="email" id="profileEmail" placeholder="dgdgdg@gmail.com" value="dgdgdg@gmail.com"
-                            class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm bg-gray-50 text-gray-500 focus:outline-none"
+                            class="w-full border border-brand-light/50 rounded-lg px-4 py-2.5 text-sm bg-brand-cream text-brand-dark/70 focus:outline-none"
                             readonly>
                     </div>
                 </div>
@@ -277,7 +294,7 @@
                 <!-- Modal Footer -->
                 <div class="px-6 pb-6 space-y-3">
                     <button id="updateProfileBtn"
-                        class="w-full bg-gray-900 hover:bg-gray-800 text-white font-medium py-2.5 rounded-lg transition">
+                        class="w-full bg-brand-dark hover:bg-brand-medium text-white font-medium py-2.5 rounded-lg transition">
                         Update Profile
                     </button>
                     <button id="logOutBtn" class="w-full text-red-500 hover:text-red-600 font-medium py-2 transition">
