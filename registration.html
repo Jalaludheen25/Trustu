@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - TrustU</title>
+
+
+
+
+
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#749f87',
+                            medium: '#568068',
+                            accent: '#669179',
+                            dark: '#557c67',
+                            cream: '#dfe6cc',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+
+</head>
+
+<body class="bg-brand-cream min-h-screen flex items-center justify-center p-4">
+    <div class="w-full max-w-md">
+        <div class="bg-white rounded-2xl shadow-xl p-8 border border-brand-light/30 relative">
+            <!-- Back Button -->
+            <a href="login.html"
+                class="absolute left-6 top-8 text-brand-medium hover:text-brand-dark transition-colors flex items-center gap-1 text-sm font-medium">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                Back
+            </a>
+
+            <div class="text-center mb-8">
+                <div
+                    class="w-12 h-12 rounded-full bg-brand-medium mx-auto mb-4 flex items-center justify-center text-white shadow-lg">
+                    <i data-lucide="user-plus" class="w-6 h-6"></i>
+                </div>
+                <h1 class="text-2xl font-bold text-brand-dark">Create TrustU Account</h1>
+            </div>
+
+            <div class="flex bg-brand-light/20 rounded-lg p-1 mb-6">
+                <button id="phoneTab" onclick="switchTab('phone')"
+                    class="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-md text-sm font-medium transition-all bg-white shadow-sm text-brand-dark">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-4 h-4">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                    </svg>
+                    Phone
+                </button>
+                <button id="emailTab" onclick="switchTab('email')"
+                    class="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-md text-sm font-medium transition-all text-brand-medium hover:text-brand-dark">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-4 h-4">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                    </svg>
+                    Email
+                </button>
+            </div>
+
+            <form id="phoneForm" class="space-y-6">
+                <div>
+                    <label for="phoneNumber" class="block text-sm font-medium text-brand-dark mb-2">Phone Number</label>
+                    <input type="tel" id="phoneNumber" maxlength="10" pattern="[0-9]{10}"
+                        placeholder="Enter your 10-digit phone number"
+                        class="w-full border border-brand-light/50 rounded-lg px-4 py-3 text-sm text-brand-dark focus:ring-2 focus:ring-brand-medium/50 focus:border-brand-medium focus:outline-none transition"
+                        oninput="validatePhone(this)">
+                    <p id="phoneError" class="text-red-500 text-xs mt-1 hidden">Please enter a valid 10-digit phone
+                        number</p>
+                </div>
+                <button type="submit" id="phoneSendOtp"
+                    class="w-full bg-brand-medium hover:bg-brand-dark text-white font-medium py-3 rounded-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
+                    disabled>
+                    Send OTP
+                </button>
+            </form>
+
+            <form id="emailForm" class="space-y-6 hidden">
+                <div>
+                    <label for="emailAddress" class="block text-sm font-medium text-brand-dark mb-2">Email
+                        Address</label>
+                    <input type="email" id="emailAddress" placeholder="Enter your email address"
+                        class="w-full border border-brand-light/50 rounded-lg px-4 py-3 text-sm text-brand-dark focus:ring-2 focus:ring-brand-medium/50 focus:border-brand-medium focus:outline-none transition"
+                        oninput="validateEmail(this)">
+                    <p id="emailError" class="text-red-500 text-xs mt-1 hidden">Please enter a valid email address</p>
+                </div>
+                <button type="submit" id="emailSendOtp"
+                    class="w-full bg-brand-medium hover:bg-brand-dark text-white font-medium py-3 rounded-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
+                    disabled>
+                    Send OTP
+                </button>
+            </form>
+        </div>
+
+        <p class="text-center text-brand-medium text-sm mt-6">
+            By signing in, you agree to our <a href="#" class="text-brand-dark hover:underline">Terms of Service</a>
+        </p>
+    </div>
+
+    <script>
+        let currentTab = 'phone';
+
+        function switchTab(tab) {
+            currentTab = tab;
+            const phoneTab = document.getElementById('phoneTab');
+            const emailTab = document.getElementById('emailTab');
+            const phoneForm = document.getElementById('phoneForm');
+            const emailForm = document.getElementById('emailForm');
+
+            if (tab === 'phone') {
+                phoneTab.className = 'flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-md text-sm font-medium transition-all bg-white shadow-sm text-brand-dark';
+                emailTab.className = 'flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-md text-sm font-medium transition-all text-brand-medium hover:text-brand-dark';
+                phoneForm.classList.remove('hidden');
+                emailForm.classList.add('hidden');
+            } else {
+                emailTab.className = 'flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-md text-sm font-medium transition-all bg-white shadow-sm text-brand-dark';
+                phoneTab.className = 'flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-md text-sm font-medium transition-all text-brand-medium hover:text-brand-dark';
+                emailForm.classList.remove('hidden');
+                phoneForm.classList.add('hidden');
+            }
+        }
+
+        function validatePhone(input) {
+            input.value = input.value.replace(/[^0-9]/g, '');
+            const phoneNumber = input.value;
+            const sendBtn = document.getElementById('phoneSendOtp');
+            const errorEl = document.getElementById('phoneError');
+
+            if (phoneNumber.length === 10) {
+                sendBtn.disabled = false;
+                errorEl.classList.add('hidden');
+            } else {
+                sendBtn.disabled = true;
+                if (phoneNumber.length > 0 && phoneNumber.length < 10) {
+                    errorEl.classList.remove('hidden');
+                } else {
+                    errorEl.classList.add('hidden');
+                }
+            }
+        }
+
+        function validateEmail(input) {
+            const email = input.value;
+            const sendBtn = document.getElementById('emailSendOtp');
+            const errorEl = document.getElementById('emailError');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (emailRegex.test(email)) {
+                sendBtn.disabled = false;
+                errorEl.classList.add('hidden');
+            } else {
+                sendBtn.disabled = true;
+                if (email.length > 0) {
+                    errorEl.classList.remove('hidden');
+                } else {
+                    errorEl.classList.add('hidden');
+                }
+            }
+        }
+
+        document.getElementById('phoneForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const phoneNumber = document.getElementById('phoneNumber').value;
+            if (phoneNumber.length === 10) {
+                localStorage.setItem('loginMethod', 'phone');
+                localStorage.setItem('loginValue', phoneNumber);
+                window.location.href = 'verify-otp.html';
+            }
+        });
+
+        document.getElementById('emailForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const email = document.getElementById('emailAddress').value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (emailRegex.test(email)) {
+                localStorage.setItem('loginMethod', 'email');
+                localStorage.setItem('loginValue', email);
+                window.location.href = 'verify-otp.html';
+            }
+        });
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
