@@ -37,6 +37,15 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+    
+        .modern-icon {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .modern-icon:hover {
+            transform: translateY(-2px);
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+        }
+        
     </style>
     
 </head>
@@ -63,10 +72,7 @@
                 class="block bg-white rounded-xl p-6 shadow-sm border border-brand-light/30 hover:border-gray-300 hover:shadow-md transition cursor-pointer">
                 <div class="flex flex-col items-center text-center">
                     <div class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                            stroke="currentColor" class="w-6 h-6 text-blue-500">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                        </svg>
+                        <i class="modern-icon w-6 h-6 text-blue-500" data-lucide="plus"></i>
                     </div>
                     <h3 class="font-semibold text-brand-dark mb-1">Accommodation</h3>
                     <p class="text-sm text-gray-500">List your flat, PG, hostel, or hotel</p>
@@ -78,10 +84,7 @@
                 class="block bg-white rounded-xl p-6 shadow-sm border border-brand-light/30 hover:border-gray-300 hover:shadow-md transition cursor-pointer">
                 <div class="flex flex-col items-center text-center">
                     <div class="w-14 h-14 rounded-full bg-green-50 flex items-center justify-center mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                            stroke="currentColor" class="w-6 h-6 text-green-500">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                        </svg>
+                        <i class="modern-icon w-6 h-6 text-green-500" data-lucide="plus"></i>
                     </div>
                     <h3 class="font-semibold text-brand-dark mb-1">Proxy Services</h3>
                     <p class="text-sm text-gray-500">Offer proxy work, tour guide, or assistance</p>
@@ -93,7 +96,7 @@
 
 <script src="https://unpkg.com/lucide@latest"></script>
     <script>
-        lucide.createIcons();
+        lucide.createIcons({ strokeWidth: 1.5 });
     </script>
 </body>
 

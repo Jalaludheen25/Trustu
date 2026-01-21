@@ -37,6 +37,15 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+    
+        .modern-icon {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .modern-icon:hover {
+            transform: translateY(-2px);
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+        }
+        
     </style>
     
 </head>
@@ -128,7 +137,7 @@
 
 <script src="https://unpkg.com/lucide@latest"></script>
     <script>
-        lucide.createIcons();
+        lucide.createIcons({ strokeWidth: 1.5 });
     </script>
 </body>
 

@@ -37,45 +37,50 @@
             background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(10px);
         }
+    
+        .modern-icon {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .modern-icon:hover {
+            transform: translateY(-2px);
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+        }
+        
     </style>
 </head>
 
 <body class="bg-brand-cream min-h-screen flex items-center justify-center p-4">
     <div class="max-w-md w-full">
-        <!-- Logo/Header -->
-        <div class="text-center mb-10">
-            <div
-                class="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-brand-dark text-white mb-4 shadow-xl transform -rotate-6">
-                <i data-lucide="users" class="w-10 h-10"></i>
-            </div>
-            <h1 class="text-3xl font-bold text-brand-dark">TrustU</h1>
-            <p class="text-brand-medium">Keralites in Jamia</p>
-        </div>
-
-        <!-- Login Form -->
-        <div class="bg-white rounded-3xl p-8 shadow-2xl border border-brand-light/20">
-            <h2 class="text-xl font-bold text-brand-dark mb-6 text-center">Welcome Back</h2>
-
-            <form action="index.html" class="space-y-5">
-                <div>
-                    <label class="block text-sm font-medium text-brand-dark mb-1.5 ml-1">Username or Email</label>
-                    <div class="relative">
-                        <div
-                            class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-brand-medium">
-                            <i data-lucide="user" class="w-5 h-5"></i>
-                        </div>
-                        <input type="text" placeholder="Enter your username"
-                            class="w-full bg-brand-cream/30 border border-brand-light/30 rounded-2xl pl-11 pr-4 py-3.5 text-brand-dark focus:ring-2 focus:ring-brand-medium/20 focus:border-brand-medium transition-all outline-none"
-                            required>
-                    </div>
+        <!-- logo/Header -->
+        <div class="text-center mb-10 flex flex-col items-center gap-4 animate-fadeIn">
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-brand-medium to-brand-dark rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                <div class="relative w-28 h-28 bg-white rounded-3xl flex items-center justify-center shadow-2xl p-2.5">
+                    <img src="logo.png" alt="TrustU Logo" class="w-full h-full object-contain rounded-2xl">
                 </div>
+            </div>
+            <div>
+                <h1 class="text-4xl font-extrabold text-brand-dark tracking-tight">TrustU</h1>
+                <p class="text-brand-medium font-medium">Keralites in Jamia</p>
+            </div>
+        </div>
+            <div>
+                <h1 class="text-4xl font-extrabold text-brand-dark tracking-tight">TrustU</h1>
+                <p class="text-brand-medium font-medium">Keralites in Jamia</p>
+            </div>
+        </div>
+            <div>
+                <h1 class="text-4xl font-extrabold text-brand-dark tracking-tight">TrustU</h1>
+                <p class="text-brand-medium font-medium">Keralites in Jamia</p>
+            </div>
+        </div>
 
                 <div>
                     <label class="block text-sm font-medium text-brand-dark mb-1.5 ml-1">Password</label>
                     <div class="relative">
                         <div
                             class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-brand-medium">
-                            <i data-lucide="lock" class="w-5 h-5"></i>
+                            <i class="modern-icon modern-icon" data-lucide="lock" class="w-5 h-5"></i>
                         </div>
                         <input type="password" placeholder="••••••••"
                             class="w-full bg-brand-cream/30 border border-brand-light/30 rounded-2xl pl-11 pr-4 py-3.5 text-brand-dark focus:ring-2 focus:ring-brand-medium/20 focus:border-brand-medium transition-all outline-none"
@@ -97,7 +102,7 @@
                 <div class="pt-2 gap-4 flex flex-col">
                     <button type="submit"
                         class="w-full bg-brand-dark hover:bg-brand-medium text-white font-bold py-4 rounded-2xl shadow-lg shadow-brand-dark/20 transform transition-all active:scale-95 flex items-center justify-center gap-2">
-                        <i data-lucide="log-in" class="w-5 h-5"></i>
+                        <i class="modern-icon modern-icon" data-lucide="log-in" class="w-5 h-5"></i>
                         Login
                     </button>
 
@@ -109,7 +114,7 @@
 
                     <a href="registration.html"
                         class="w-full bg-white border-2 border-brand-medium text-brand-medium hover:bg-brand-medium hover:text-white font-bold py-4 rounded-2xl transform transition-all active:scale-95 flex items-center justify-center gap-2">
-                        <i data-lucide="user-plus" class="w-5 h-5"></i>
+                        <i class="modern-icon modern-icon" data-lucide="user-plus" class="w-5 h-5"></i>
                         Create Account
                     </a>
                 </div>
@@ -125,7 +130,7 @@
     </div>
 
     <script>
-        lucide.createIcons();
+        lucide.createIcons({ strokeWidth: 1.5 });
     </script>
 </body>
 
