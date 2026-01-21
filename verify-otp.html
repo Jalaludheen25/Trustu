@@ -53,7 +53,7 @@
 
 <body class="bg-brand-cream min-h-screen flex items-center justify-center p-4">
     <div class="w-full max-w-md">
-        <div class="bg-white rounded-2xl shadow-xl p-8 border border-brand-light/30">
+        <div class="bg-white rounded-2xl shadow-xl p-8 border border-white/10/30">
             <button onclick="goBack()"
                 class="flex items-center gap-2 text-brand-medium hover:text-brand-dark mb-6 transition">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
@@ -72,7 +72,7 @@
                 <div>
                     <label for="otpInput" class="block text-sm font-medium text-brand-dark mb-2">Enter OTP</label>
                     <input type="text" id="otpInput" maxlength="6" pattern="[0-9]{6}" placeholder="123456"
-                        class="w-full border border-brand-light/50 rounded-lg px-4 py-3 text-sm text-brand-dark text-center text-lg tracking-widest font-medium focus:ring-2 focus:ring-brand-medium/50 focus:border-brand-medium focus:outline-none transition"
+                        class="w-full border border-white/10/50 rounded-lg px-4 py-3 text-sm text-brand-dark text-center text-lg tracking-widest font-medium focus:ring-2 focus:ring-brand-medium/50 focus:border-white/10 focus:outline-none transition"
                         oninput="validateOtp(this)">
                     <p class="text-brand-medium text-xs text-center mt-2">Demo: Use 123456 as OTP</p>
                     <p id="otpError" class="text-red-500 text-xs mt-1 hidden text-center">Invalid OTP. Please try again.

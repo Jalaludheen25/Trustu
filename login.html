@@ -17,7 +17,7 @@
                                 medium: '#568068',
                                 accent: '#669179',
                                 dark: '#0c7c31',
-                            'header-text': '#0c7c31',
+                                'header-text': '#0c7c31',
                                 cream: '#dfe6cc',
                             }
                         }
@@ -28,60 +28,58 @@
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-
-        .login-card {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-        }
-    
-        .modern-icon {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .modern-icon:hover {
-            transform: translateY(-2px);
-            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
-        }
-        
-    </style>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="bg-brand-cream min-h-screen flex items-center justify-center p-4">
     <div class="max-w-md w-full">
-        <!-- logo/Header -->
+        <!-- Logo/Header -->
         <div class="text-center mb-10 flex flex-col items-center gap-4 animate-fadeIn">
             <div class="relative group">
-                <div class="absolute -inset-1 bg-gradient-to-r from-brand-medium to-brand-dark rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-                <div class="relative w-28 h-28 bg-white rounded-3xl flex items-center justify-center shadow-2xl p-2.5">
-                    <img src="assets/images/logo.png" alt="TrustU Logo" class="w-full h-full object-contain rounded-2xl">
+                <div
+                    class="absolute -inset-1 bg-gradient-to-r from-brand-medium/50 to-brand-dark rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200">
+                </div>
+                <div
+                    class="relative w-28 h-28 bg-white rounded-3xl flex items-center justify-center shadow-2xl p-2.5 animate-login-logo">
+                    <img src="assets/images/logo.png" alt="TrustU Logo"
+                        class="w-full h-full object-contain rounded-2xl">
                 </div>
             </div>
             <div>
                 <h1 class="text-4xl font-extrabold text-brand-dark tracking-tight">TrustU</h1>
-                <p class="text-brand-medium font-medium">Keralites in Jamia</p>
+                <p class="text-brand-medium font-medium mt-1">Keralites in Jamia</p>
             </div>
         </div>
-            <div>
-                <h1 class="text-4xl font-extrabold text-brand-dark tracking-tight">TrustU</h1>
-                <p class="text-brand-medium font-medium">Keralites in Jamia</p>
+
+        <!-- Login Card -->
+        <div
+            class="bg-white rounded-[2.5rem] shadow-2xl p-8 border border-brand-light/20 relative overflow-hidden backdrop-blur-sm">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-brand-light/10 rounded-full -mr-16 -mt-16 blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-32 h-32 bg-brand-medium/10 rounded-full -ml-16 -mb-16 blur-3xl">
             </div>
-        </div>
-            <div>
-                <h1 class="text-4xl font-extrabold text-brand-dark tracking-tight">TrustU</h1>
-                <p class="text-brand-medium font-medium">Keralites in Jamia</p>
-            </div>
-        </div>
+
+            <h2 class="text-2xl font-bold text-center text-brand-dark mb-8">Welcome Back!</h2>
+
+            <form action="index.html" class="space-y-6">
+                <div>
+                    <label class="block text-sm font-medium text-brand-dark mb-1.5 ml-1">Username or Email</label>
+                    <div class="relative">
+                        <div
+                            class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-brand-medium">
+                            <i class="modern-icon w-5 h-5" data-lucide="user"></i>
+                        </div>
+                        <input type="text" placeholder="your.name@jamia.edu.in"
+                            class="w-full bg-brand-cream/30 border border-brand-light/30 rounded-2xl pl-11 pr-4 py-3.5 text-brand-dark focus:ring-2 focus:ring-brand-medium/20 focus:border-brand-medium transition-all outline-none"
+                            required>
+                    </div>
+                </div>
 
                 <div>
                     <label class="block text-sm font-medium text-brand-dark mb-1.5 ml-1">Password</label>
                     <div class="relative">
                         <div
                             class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-brand-medium">
-                            <i class="modern-icon modern-icon" data-lucide="lock" class="w-5 h-5"></i>
+                            <i class="modern-icon w-5 h-5" data-lucide="lock"></i>
                         </div>
                         <input type="password" placeholder="••••••••"
                             class="w-full bg-brand-cream/30 border border-brand-light/30 rounded-2xl pl-11 pr-4 py-3.5 text-brand-dark focus:ring-2 focus:ring-brand-medium/20 focus:border-brand-medium transition-all outline-none"
@@ -103,7 +101,7 @@
                 <div class="pt-2 gap-4 flex flex-col">
                     <button type="submit"
                         class="w-full bg-brand-dark hover:bg-brand-medium text-white font-bold py-4 rounded-2xl shadow-lg shadow-brand-dark/20 transform transition-all active:scale-95 flex items-center justify-center gap-2">
-                        <i class="modern-icon modern-icon" data-lucide="log-in" class="w-5 h-5"></i>
+                        <i class="modern-icon w-5 h-5" data-lucide="log-in"></i>
                         Login
                     </button>
 
@@ -115,7 +113,7 @@
 
                     <a href="registration.html"
                         class="w-full bg-white border-2 border-brand-medium text-brand-medium hover:bg-brand-medium hover:text-white font-bold py-4 rounded-2xl transform transition-all active:scale-95 flex items-center justify-center gap-2">
-                        <i class="modern-icon modern-icon" data-lucide="user-plus" class="w-5 h-5"></i>
+                        <i class="modern-icon w-5 h-5" data-lucide="user-plus"></i>
                         Create Account
                     </a>
                 </div>
@@ -130,9 +128,6 @@
         </p>
     </div>
 
-    <script>
-        lucide.createIcons({ strokeWidth: 1.5 });
-    </script>
     <script src="js/main.js"></script>
 </body>
 
