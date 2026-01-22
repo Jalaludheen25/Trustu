@@ -17,7 +17,7 @@
                                 medium: '#568068',
                                 accent: '#669179',
                                 dark: '#0c7c31',
-                                'header-text': '#0c7c31',
+                                'header-text': '#ffffff',
                                 cream: '#dfe6cc',
                             }
                         }
@@ -137,88 +137,7 @@
         </p>
     </div>
 
-    <script>
-        let currentTab = 'phone';
 
-        function switchTab(tab) {
-            currentTab = tab;
-            const phoneTab = document.getElementById('phoneTab');
-            const emailTab = document.getElementById('emailTab');
-            const phoneForm = document.getElementById('phoneForm');
-            const emailForm = document.getElementById('emailForm');
-
-            if (tab === 'phone') {
-                phoneTab.className = 'flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-semibold transition-all bg-white shadow-sm text-brand-dark';
-                emailTab.className = 'flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-semibold transition-all text-brand-medium hover:text-brand-dark';
-                phoneForm.classList.remove('hidden');
-                emailForm.classList.add('hidden');
-            } else {
-                emailTab.className = 'flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-semibold transition-all bg-white shadow-sm text-brand-dark';
-                phoneTab.className = 'flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-semibold transition-all text-brand-medium hover:text-brand-dark';
-                emailForm.classList.remove('hidden');
-                phoneForm.classList.add('hidden');
-            }
-        }
-
-        function validatePhone(input) {
-            input.value = input.value.replace(/[^0-9]/g, '');
-            const phoneNumber = input.value;
-            const sendBtn = document.getElementById('phoneSendOtp');
-            const errorEl = document.getElementById('phoneError');
-
-            if (phoneNumber.length === 10) {
-                sendBtn.disabled = false;
-                errorEl.classList.add('hidden');
-            } else {
-                sendBtn.disabled = true;
-                if (phoneNumber.length > 0 && phoneNumber.length < 10) {
-                    errorEl.classList.remove('hidden');
-                } else {
-                    errorEl.classList.add('hidden');
-                }
-            }
-        }
-
-        function validateEmail(input) {
-            const email = input.value;
-            const sendBtn = document.getElementById('emailSendOtp');
-            const errorEl = document.getElementById('emailError');
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-            if (emailRegex.test(email)) {
-                sendBtn.disabled = false;
-                errorEl.classList.add('hidden');
-            } else {
-                sendBtn.disabled = true;
-                if (email.length > 0) {
-                    errorEl.classList.remove('hidden');
-                } else {
-                    errorEl.classList.add('hidden');
-                }
-            }
-        }
-
-        document.getElementById('phoneForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            const phoneNumber = document.getElementById('phoneNumber').value;
-            if (phoneNumber.length === 10) {
-                localStorage.setItem('loginMethod', 'phone');
-                localStorage.setItem('loginValue', phoneNumber);
-                window.location.href = 'verify-otp.html';
-            }
-        });
-
-        document.getElementById('emailForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            const email = document.getElementById('emailAddress').value;
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (emailRegex.test(email)) {
-                localStorage.setItem('loginMethod', 'email');
-                localStorage.setItem('loginValue', email);
-                window.location.href = 'verify-otp.html';
-            }
-        });
-    </script>
     <script src="js/main.js"></script>
 </body>
 

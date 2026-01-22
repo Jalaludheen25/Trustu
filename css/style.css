@@ -1,16 +1,20 @@
+/* Global Styles */
 body {
     font-family: 'Inter', sans-serif;
+    color: #26453c;
 }
 
+/* Icon Styles */
 .modern-icon {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modern-icon:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 8px rgba(30, 81, 54, 0.2));
+    transform: translateY(-2px);
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
 }
 
+/* Animation Keyframes */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -20,6 +24,18 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes fadeInModal {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
@@ -47,10 +63,20 @@ body {
     }
 }
 
+/* Animation Classes */
+.animate-fadeIn {
+    animation: fadeIn 0.3s ease-out;
+}
+
+.animate-fadeInModal {
+    animation: fadeInModal 0.2s ease-out;
+}
+
 .animate-login-logo {
     animation: logo-float 4s ease-in-out infinite, logo-glow 3s ease-in-out infinite;
 }
 
+/* Utility Classes */
 .header-white-border {
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }

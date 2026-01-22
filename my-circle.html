@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Circle - TrustU</title>
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -23,7 +23,7 @@
                             medium: '#568068',
                             accent: '#669179',
                             dark: '#0c7c31',
-                            'header-text': '#0c7c31',
+                            'header-text': '#ffffff',
                             cream: '#dfe6cc',
                         }
                     }
@@ -33,31 +33,20 @@
     </script>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    
-        .modern-icon {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .modern-icon:hover {
-            transform: translateY(-2px);
-            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
-        }
-        
-    </style>
-    
+
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="bg-brand-cream min-h-screen text-brand-dark">
 
     <!-- Header -->
-    <header class="bg-brand-dark border-b border-white/10 sticky top-0 z-50">
+    <header class="bg-brand-dark border-b-2 border-white/25 sticky top-0 z-50">
         <div class="container max-w-5xl mx-auto px-4 md:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-3 group px-2 py-1 rounded-xl hover:bg-white/5 transition-all">
-                <img src="assets/images/logo.png" alt="TrustU Logo" class="h-10 w-auto rounded-lg shadow-sm group-hover:scale-105 transition-transform">
+            <a href="index.html"
+                class="flex items-center gap-3 group px-2 py-1 rounded-xl hover:bg-white/5 transition-all">
+                <img src="assets/images/logo.png" alt="TrustU Logo"
+                    class="h-10 w-auto rounded-lg shadow-sm group-hover:scale-105 transition-transform">
                 <div>
                     <h1 class="font-bold text-lg leading-tight text-brand-header-text">TrustU</h1>
                     <p class="text-[10px] text-brand-header-text opacity-70">Keralites in Jamia</p>
@@ -68,7 +57,8 @@
                     <i class="modern-icon modern-icon" data-lucide="globe" style="width: 18px; height: 18px;"></i>
                     <span class="hidden md:inline">My Circle</span>
                 </a>
-                <button id="myProfileBtn" class="hover:opacity-80 border border-brand-header-text/20 rounded-xl px-4 py-2 flex items-center gap-2 bg-white/5 transition-all shadow-sm">
+                <button id="myProfileBtn"
+                    class="hover:opacity-80 border border-white/20 rounded-xl px-4 py-2 flex items-center gap-2 bg-white/5 transition-all shadow-sm">
                     <i class="modern-icon modern-icon" data-lucide="settings" style="width: 18px; height: 18px;"></i>
                     <span class="hidden md:inline">My Profile</span>
                 </button>
@@ -88,7 +78,8 @@
                             d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
                     </svg>
                     <h2 class="text-lg font-bold text-brand-dark">Community Members</h2>
-                    <span class="bg-gray-100 text-brand-dark/70 text-xs font-semibold px-2 py-0.5 rounded-full">23</span>
+                    <span
+                        class="bg-gray-100 text-brand-dark/70 text-xs font-semibold px-2 py-0.5 rounded-full">23</span>
                 </div>
                 <button
                     class="text-sm border border-white/10/50 text-brand-dark/70 px-3 py-1.5 rounded hover:bg-gray-50 transition">See
@@ -435,7 +426,7 @@
         </section>
     </main>
 
-<script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         lucide.createIcons({ strokeWidth: 1.5 });
     </script>

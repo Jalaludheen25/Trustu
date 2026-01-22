@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrustU - Keralites in Jamia</title>
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -23,7 +23,7 @@
                             medium: '#568068',
                             accent: '#669179',
                             dark: '#0c7c31',
-                            'header-text': '#0c7c31',
+                            'header-text': '#ffffff',
                             cream: '#dfe6cc',
                         }
                     }
@@ -33,31 +33,19 @@
     </script>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            color: #26453c;
-        }
-    
-        .modern-icon {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .modern-icon:hover {
-            transform: translateY(-2px);
-            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
-        }
-        
-    </style>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="bg-brand-cream min-h-screen text-brand-dark">
 
     <!-- Header -->
-    <header class="bg-brand-dark border-b border-white/10 sticky top-0 z-50">
+    <header class="bg-brand-dark border-b-2 border-white/25 sticky top-0 z-50">
         <div class="container max-w-5xl mx-auto px-4 md:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-3 group px-2 py-1 rounded-xl hover:bg-white/5 transition-all">
-                <img src="assets/images/logo.png" alt="TrustU Logo" class="h-10 w-auto rounded-lg shadow-sm group-hover:scale-105 transition-transform">
+            <a href="index.html"
+                class="flex items-center gap-3 group px-2 py-1 rounded-xl hover:bg-white/5 transition-all">
+                <img src="assets/images/logo.png" alt="TrustU Logo"
+                    class="h-10 w-auto rounded-lg shadow-sm group-hover:scale-105 transition-transform">
                 <div>
                     <h1 class="font-bold text-lg leading-tight text-brand-header-text">TrustU</h1>
                     <p class="text-[10px] text-brand-header-text opacity-70">Keralites in Jamia</p>
@@ -68,7 +56,8 @@
                     <i class="modern-icon modern-icon" data-lucide="globe" style="width: 18px; height: 18px;"></i>
                     <span class="hidden md:inline">My Circle</span>
                 </a>
-                <button id="myProfileBtn" class="hover:opacity-80 border border-brand-header-text/20 rounded-xl px-4 py-2 flex items-center gap-2 bg-white/5 transition-all shadow-sm">
+                <button id="myProfileBtn"
+                    class="hover:opacity-80 border border-white/20 rounded-xl px-4 py-2 flex items-center gap-2 bg-white/5 transition-all shadow-sm">
                     <i class="modern-icon modern-icon" data-lucide="settings" style="width: 18px; height: 18px;"></i>
                     <span class="hidden md:inline">My Profile</span>
                 </button>
@@ -167,7 +156,7 @@
 
     </main>
 
-    <script src="main.js"></script>
+
 
     <!-- Profile Modal -->
     <div id="profileModal" class="fixed inset-0 z-50 hidden">
@@ -208,7 +197,8 @@
                                 <option value="female">Female</option>
                                 <option value="other">Other</option>
                             </select>
-                            <i class="modern-icon w-4 h-4 absolute right-4 top-1/2 -translate-y-1/2 text-brand-dark/40 pointer-events-none" data-lucide="chevron-down"></i>
+                            <i class="modern-icon w-4 h-4 absolute right-4 top-1/2 -translate-y-1/2 text-brand-dark/40 pointer-events-none"
+                                data-lucide="chevron-down"></i>
                         </div>
                     </div>
 
@@ -226,7 +216,8 @@
                                 <option value="alumni">Alumni</option>
                                 <option value="other">Other</option>
                             </select>
-                            <i class="modern-icon w-4 h-4 absolute right-4 top-1/2 -translate-y-1/2 text-brand-dark/40 pointer-events-none" data-lucide="chevron-down"></i>
+                            <i class="modern-icon w-4 h-4 absolute right-4 top-1/2 -translate-y-1/2 text-brand-dark/40 pointer-events-none"
+                                data-lucide="chevron-down"></i>
                         </div>
                     </div>
 
@@ -262,37 +253,10 @@
         </div>
     </div>
 
-    <style>
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: scale(0.95);
-            }
 
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
 
-        .animate-fadeIn {
-            animation: fadeIn 0.2s ease-out;
-        }
-    
-        .modern-icon {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .modern-icon:hover {
-            transform: translateY(-2px);
-            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
-        }
-        
-    </style>
 
-    <script>
-        
-    </script>
-<script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         lucide.createIcons({ strokeWidth: 1.5 });
     </script>
